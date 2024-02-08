@@ -30,6 +30,10 @@ public class Calculator {
         while (operator >= 5 || operator <= 0) {
             System.out.println("Please input which operator you would like to perform on the two numbers. Type 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division.");
             operator = input.nextInt();
+            if ((operator == 4 && number2 == 0) || (operator == 4 && num2 == 0)) {
+                System.out.println("Error: Divide by zero");
+                operator = 0;
+            }
         }
         switch (operator) {
             case 1:
