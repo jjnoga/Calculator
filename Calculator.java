@@ -8,18 +8,23 @@ public class Calculator {
         int number1 = input.nextInt();
         int number2 = input.nextInt();
 
-        int arith = 3;
-        while (arith >= 3 || arith <= 0) {
-            System.out.println("Please input which operator you would like to perform on the two numbers. Type 1 for addition, 2 for subtraction.");
-            arith = input.nextInt();
+        int operator = 0;
+        while (operator >= 5 || operator <= 0) {
+            System.out.println("Please input which operator you would like to perform on the two numbers. Type 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division.");
+            operator = input.nextInt();
         }
-        switch (arith) {
+        switch (operator) {
             case 1:
                 System.out.println(number1 + number2);
                 break;
             case 2:
                 System.out.println(number1 - number2);
                 break;
+            case 3:
+                System.out.println(number1 * number2);
+                break;
+            default:
+                System.out.println(number1 / number2);
         }
 
     }
